@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: beige;
+        }
+        .main{
+            background-color: white;
+            width: 50%;
+            text-align: center;
+        }
+        .main input{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Calculadora Simples</h1>
+        <input type="number" id="total"><br>
+        <input type="number" id = "a" placeholder="informe o primeiro valor"><br>
+        <input type="number" id="b" placeholder="Informe o segundo valor"><br>
+        <button onclick="soma()">+</button>
+        <button onclick="subtracao()">-</button>
+        <button onclick="multiplicar()">*</button>
+        <button onclick="divisao()">/</button>
+        <button onclick="limpar()">C</button>
+            
+    </div>
+
+    <script>
+        const a = document.getElementById("a");
+        const b = document.getElementById("b");
+        const total = document.getElementById("total");
+
+        function soma(){
+            total.value = parseFloat(a.value)+parseFloat(b.value);
+            console.log(total);
+        }
+        function subtracao(){
+            total.value = parseFloat(a.value)-parseFloat(b.value);
+        }
+        function multiplicar(){
+            total.value = parseFloat(a.value)*parseFloat(b.value);
+        }
+        function divisao(){
+            total.value = parseFloat(a.value)/parseFloat(b.value);
+        }
+
+
+
+    </script>
+</body>
+</html>
